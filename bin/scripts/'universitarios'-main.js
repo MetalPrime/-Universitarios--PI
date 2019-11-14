@@ -1,5 +1,5 @@
 
-let btn = document.querySelector(".btn")
+let btn = document.querySelector(".botton-main")
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
@@ -22,9 +22,11 @@ var database = firebase.database();
 
 btn.addEventListener("click", function () {
 
-    firebase.database().ref('infografias/').set({
+document.location.href="./../bin/views/'universitarios'-page1.html";
+
+   /* firebase.database().ref('infografias/').set({
         descripcion: "sdsdsa dasdsa jdas askjd naskj nksa djna k anksd jn"
      
-      });
+      });*/
 
 })
