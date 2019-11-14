@@ -1,14 +1,17 @@
 body{
     width: 360px;
     height: 720px;
+   
 }
 
 header,main,footer{
     width: 100%;
     position: relative;
+    background: black;
 }
 
 footer{
     margin-top: 100px;
     text-align: center;
+    background: black;
 }
