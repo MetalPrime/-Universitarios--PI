@@ -13,12 +13,16 @@ body{
 
 
 header,main,footer{
-    flex-direction: column;
     position: relative;
     transition: background .5s ease-in-out;
     display: block;
 }
-
+ 
+main {
+    height: 500px;
+    width: fit-content;
+    margin: 0 auto;
+}
 
 
 footer{
@@ -59,25 +63,21 @@ color: #696A9F;
 
 .list-information{
 
-margin: auto;
+margin: 20px auto;
 width: 265px;
 height: 29px;
-left: 55px;
-top: 516px;
+display: block;
 
 border: 2px solid #594D94;
 box-sizing: border-box;
 border-radius: 50px;
-
+font-size: 16px;
+padding: 0 20px;
 }
 
 .text-input{
-    
-width: 150px;
-height: 19px;
+
 margin: auto;
-left: 55px;
-top: 462px;
 
 font-family: Nunito;
 font-style: normal;
@@ -90,13 +90,32 @@ line-height: 19px;
 color: #000000;
 }
 
+.text-politics{
+
+margin: auto;
+width: 200px;
+height: 28px;
+
+display: block;
+
+font-family: Nunito;
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: rgba(43, 54, 64, 0.6);
+}
+
 .botton-main{
     /* Rectangle 2 */
 
 cursor: pointer;
 width: 141px;
 height: 40px;
-margin: auto;
+margin: 20px auto;
 color: white;
 text-align: center;
 /*esto sirve para alinear al centro centro*/
