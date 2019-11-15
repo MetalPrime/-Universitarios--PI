@@ -13,9 +13,10 @@ body{
 
 
 header,main,footer{
-
+    flex-direction: column;
     position: relative;
     transition: background .5s ease-in-out;
+    display: block;
 }
 
 
@@ -30,8 +31,9 @@ footer{
 .logo{
     display: block;
     margin: auto;
+    width: 100px;
   margin-top: 50px;
-  width: 20%;
+ 
     
 }
 
@@ -56,7 +58,8 @@ color: #696A9F;
 }
 
 .list-information{
- 
+
+margin: auto;
 width: 265px;
 height: 29px;
 left: 55px;
@@ -65,13 +68,14 @@ top: 516px;
 border: 2px solid #594D94;
 box-sizing: border-box;
 border-radius: 50px;
-transform: matrix(1, 0, 0, -1, 0, 0);
+
 }
 
-.list-information txt{
+.text-input{
     
-width: 135px;
+width: 150px;
 height: 19px;
+margin: auto;
 left: 55px;
 top: 462px;
 
