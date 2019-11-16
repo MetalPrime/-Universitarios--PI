@@ -1,7 +1,14 @@
-
+// cHECK
 let check = document.querySelector(".circle-botton");
-let newImage = document.getElementById("./../../data/img/circle2.png");
 
 check.addEventListener("click",function(){
-   
+   document.querySelector(".circle-botton").src = "./../../data/img/circle2.png";
+})
+
+//Pass to Suggestions
+
+let btn = document.querySelector(".botton-main");
+
+btn.addEventListener("click",function(){
+    document.location.href="Suggestions.html"
 })
