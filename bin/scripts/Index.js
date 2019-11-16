@@ -1,5 +1,6 @@
 
 let btn = document.querySelector(".botton-main")
+let body = document.querySelector(".body");
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
@@ -21,8 +22,15 @@ firebase.analytics();
 var database = firebase.database();
 
 btn.addEventListener("click", function () {
+body.classList.add("animated")
+body.classList.add("slideOutLeft")
 
-document.location.href="./../bin/views/'universitarios'-page1.html";
+
+let retraso = setTimeout(function () {
+  document.location.href="./../bin/views/RegisterScreen.html";
+},500)
+
+ 
 
    /* firebase.database().ref('infografias/').set({
         descripcion: "sdsdsa dasdsa jdas askjd naskj nksa djna k anksd jn"

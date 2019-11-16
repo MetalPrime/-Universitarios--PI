@@ -90,6 +90,20 @@ line-height: 19px;
 color: #000000;
 }
 
+.politics{
+    display: block;
+}
+
+.circle-botton{
+    cursor: pointer;
+    width: 30px;
+    align-items: baseline;
+    margin: auto;
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
 .text-politics{
 
 margin: auto;

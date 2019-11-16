@@ -10,6 +10,13 @@ body{
   
 }
 
+.back{
+    cursor: pointer;
+    display: block;
+    margin-left: 46px;
+    margin-top:  70px;
+    width:18px;
+}
 
 
 header,main,footer{
@@ -56,6 +63,20 @@ line-height: 33px;
 color: #696A9F;
 }
 
+
+.textContent{
+margin-top: 20px;
+width: 259px;
+font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 19px;
+text-align: center;
+
+color: #594D94;
+}
+
 .footer{
     position: fixed;
     bottom:0;
@@ -63,4 +84,14 @@ color: #696A9F;
     width: 100%;
     background-image: url('../../data/img/footerBase.png');
     background-size: cover;
+}
+
+/*pantalla mediana-pequeña*/
+
+@media (min-width: 1200px) {
+    .back{
+        display: none;
+
+    }
+    
 }
