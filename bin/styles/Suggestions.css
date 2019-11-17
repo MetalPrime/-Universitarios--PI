@@ -25,21 +25,28 @@ footer{
 }
 
 .header-base{
+    justify-content: center;
     margin-top: 15px;
-    position: block;
+    padding-top:5px;
     width: 100%;
+    height: 40px;
     background: #594D94;
     box-shadow: 0px -3px 4px rgba(105, 106, 159, 0.25);
     top:0;
     text-align: center;
+
+
 font-family: Nunito;
 font-style: normal;
 font-weight: bold;
 font-size: 18px;
 line-height: 25px;
-padding-top: 30px;
 /* identical to box height */
 color: #FFFFFF;
+}
+
+.burger-bottom{
+    cursor: pointer;
 }
 
 .searchText{
@@ -57,21 +64,62 @@ color: #594D94;
 }
 
 .searchBack{
-    margin: auto;
     padding-left: 40px;
     width: 100%;
     padding: .6% 0;
-    align-items: center;
     background-image: url('../../data/img/searchback.png');
     background-size: cover;
     font-size: 20px;
+    border: none;
+}
+
+@import "compass/css3";
+
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  
+  .flex-item {
+    background: #594D94;
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+    
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    border-radius:10px;
+  }
+
+.navigation-botton{
+    align-items: center;
+    padding-bottom: 15px;
+    flex-direction: row;
+    display: inline-flex;
+    margin: auto;
 }
 
 .footer-base{
 position: fixed;
+
 width: 100%;
-height: 60px;
-bottom: 0;
+height: 40px;
+bottom:0;
 background: #594D94;
 box-shadow: 0px -3px 4px rgba(105, 106, 159, 0.25);
 border-radius: 30px 30px 0px 0px;
