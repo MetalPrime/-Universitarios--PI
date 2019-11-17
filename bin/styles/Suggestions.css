@@ -104,6 +104,7 @@ color: #594D94;
     font-size: 3em;
     text-align: center;
     border-radius:10px;
+    cursor: pointer;
   }
 
 .navigation-botton{
@@ -112,7 +113,13 @@ color: #594D94;
     flex-direction: row;
     display: inline-flex;
     margin: auto;
+    cursor: pointer;
 }
+
+.navigation-elements{
+    margin-top: -40px;
+}
+
 
 .footer-base{
 position: fixed;
