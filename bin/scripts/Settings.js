@@ -3,7 +3,7 @@
 let btn = document.querySelector(".botton-main");
 
 btn.addEventListener("click",function(){
-    document.location.href="Suggestions.html"
+    document.location.href="./../bin/views/Suggestions.html"
 })
 
 //return to Suggestions
@@ -11,6 +11,6 @@ btn.addEventListener("click",function(){
 let btn = document.querySelector(".back");
 
 btn.addEventListener("click",function(){
-  document.location.href="./../views/Suggestions.html";
+  document.location.href="./../bin/views/Suggestions.html";
  
 })
