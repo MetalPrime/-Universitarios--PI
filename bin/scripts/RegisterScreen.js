@@ -10,5 +10,5 @@ check.addEventListener("click",function(){
 let btn = document.querySelector(".botton-main");
 
 btn.addEventListener("click",function(){
-    document.location.href="./../bin/views/Suggestions.html"
+    document.location.href="Suggestions.html";
 })
