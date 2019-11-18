@@ -27,7 +27,7 @@ body.classList.add("slideOutLeft")
 
 
 let retraso = setTimeout(function () {
-  document.location.href="./../bin/views/RegisterScreen.html";
+  document.location.href="./bin/views/RegisterScreen.html";
 },500)
 
  
