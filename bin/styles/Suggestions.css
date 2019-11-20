@@ -82,14 +82,15 @@ flex-direction: row-reverse;
 }
 
 .searchFont{
+    display: flex;
+    flex-direction: row;
     width: 20px;
     height: 20px;
-    position: absolute;
-
     margin-top: 6px;
+    margin: auto;
 }
 .searchBack{
-width: 90%;
+width: 70%;
 display: flex;
 justify-content: center;
 height: 38px;
@@ -98,6 +99,8 @@ padding-left: 50px;
 border: 2px solid #594D94;
 box-sizing: border-box;
 border-radius: 50px;
+background-image: url("./../../data/img/search.png");
+
 }
 
 @import "compass/css3";
@@ -121,7 +124,7 @@ border-radius: 50px;
   .flex-item {
     background: #594D94;
     padding: 5px;
-    width: 306px;
+    width: 70%;
     height: 160px;
     margin-top: 30px;
     
