@@ -1,5 +1,7 @@
 let btn = document.querySelector(".botton-main");
 
 btn.addEventListener("click",function(){
-    document.location.href="./../views/RegisterScreen.html"
+    localStorage.setItem("accountState", "false");
+    console.log(localStorage.getItem("accountState"));
+    document.location.href="./../views/LogInScreen.html"
 })

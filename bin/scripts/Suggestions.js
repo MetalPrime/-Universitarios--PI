@@ -6,6 +6,8 @@ let exit= document.querySelector(".exitBotton");
 
 // boton hamburguesa bn perron
 
+console.log(localStorage.getItem("accountState"));
+
 btnBurger.addEventListener("click", function (event) {
     menuDesplegable.style.transition = "left 0.5s ease-in-out";
     menuDesplegable.style.left = "0px";
