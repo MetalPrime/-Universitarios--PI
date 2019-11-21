@@ -14,7 +14,22 @@
 
 <body>
 
-    <video muted="" playsinline="" id="qr-video" style="transform: scaleX(-1);"></video>
+    <div>
+            <span id="cam-has-camera">true</span>
+<br>
+            <video muted="" playsinline="" id="qr-video" style="transform: scaleX(-1);"></video>
+    </div>
+
+    <div>
+            <span id="cam-qr-result" style="color: inherit;"></span>
+    </div>
+
+    <div>
+            <input type="file" id="file-selector">
+
+            <span id="file-qr-result">None</span>
+    </div>
+   
 
     <script src="./../scripts/Camara.js"></script>
     <script src="./src/p5.js"></script>
