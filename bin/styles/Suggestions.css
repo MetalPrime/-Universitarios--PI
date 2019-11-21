@@ -137,6 +137,15 @@ background-image: url("./../../data/img/search.png");
     cursor: pointer;
   }
 
+.search-botton{
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    margin: center;
+    cursor: pointer;
+}
+
 .navigation-botton{
     align-items: center;
     justify-content: center;
