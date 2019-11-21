@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>"Universitarios"</title>
+    <link rel="stylesheet" href="./../styles/Camara.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+
+
+<body>
+
+    <video muted="" playsinline="" id="qr-video" style="transform: scaleX(-1);"></video>
+
+    <script src="./../scripts/Camara.js"></script>
+    <script src="./src/p5.js"></script>
+    <script src="./src/p5.sound.js"></script>
+    <script type="module">
+        import QrScanner from './../../src/qr-scanner.min.js';
+        // do something with QrScanner
+    QrScanner.WORKER_PATH = './../../src/qr-scanner-worker.min.js';
+
+    const video = document.getElementById('qr-video');
+    const camHasCamera = document.getElementById('cam-has-camera');
+    const camQrResult = document.getElementById('cam-qr-result');
+    const camQrResultTimestamp = document.getElementById('cam-qr-result-timestamp');
+    const fileSelector = document.getElementById('file-selector');
+    const fileQrResult = document.getElementById('file-qr-result');
+
+    function setResult(label, result) {
+        label.textContent = result;
+        camQrResultTimestamp.textContent = new Date().toString();
+        label.style.color = 'teal';
+        clearTimeout(label.highlightTimeout);
+        label.highlightTimeout = setTimeout(() => label.style.color = 'inherit', 100);
+    }
+
+    // ####### Web Cam Scanning #######
+
+    QrScanner.hasCamera().then(hasCamera => camHasCamera.textContent = hasCamera);
+
+    const scanner = new QrScanner(video, result => setResult(camQrResult, result));
+    scanner.start();
+
+    document.getElementById('inversion-mode-select').addEventListener('change', event => {
+        scanner.setInversionMode(event.target.value);
+    });
+
+    // ####### File Scanning #######
+
+    fileSelector.addEventListener('change', event => {
+        const file = fileSelector.files[0];
+        if (!file) {
+            return;
+        }
+        QrScanner.scanImage(file)
+            .then(result => setResult(fileQrResult, result))
+            .catch(e => setResult(fileQrResult, e || 'No QR code found.'));
+    });
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
