@@ -53,29 +53,21 @@ color: #FFFFFF;
     margin: auto;
 }
 
-.burger-bottom{
-    cursor: pointer;
-    justify-items: left;
-    justify-content: left;
-    position: absolute;
-    margin-left: 20px;
-    margin-top: 4px;
+
+.elements{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
 }
 
-.searchText{
-    /* Búsqueda */
-margin-top: 30px;
-position: block;
-text-align: center;
-width: 100%;
-font-family: Nunito;
-font-style: normal;
-font-weight: bold;
-font-size: 19px;
-/* identical to box height */
-color: #594D94;
+#qr-video{
+    margin-top: 30px;
+    margin-left: 10%;
+    width: 80%;
+    justify-content: center;
+    margin: center;
 }
-
 
 
 @import "compass/css3";
