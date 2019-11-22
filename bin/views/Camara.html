@@ -18,11 +18,9 @@
     <header>
 
         <div class="header-base">
-            <div>
-                <img src="./../../data/img/Burger.png" alt="burgen-bottom" class="burger-bottom">
-            </div>
+
             <div id="universitarios-text">
-                Universitarios
+                Escanea tu codigo
             </div>
         </div>
     </header>
@@ -31,33 +29,17 @@
     <main>
         <div class="elements">
 
-            <div class="elements">
+            <video muted="" playsinline="" id="qr-video" style="transform: scaleX(-1);"></video>
 
-                <video muted="" playsinline="" id="qr-video" style="transform: scaleX(-1);"></video>
-            </div>
-
-            <div>
-                <b>QR DETECTED</b>
-                <span id="cam-qr-result" style="color: inherit;"></span>
-            </div>
-
-            <div>
-                <input type="file" id="file-selector">
-
-            </div>
-
-            <div>
-
-                <span id="file-qr-result">None</span>
-            </div>
+            <span id="cam-qr-result" style="color: inherit;"></span>
 
         </div>
     </main>
 
 
-    <footer>
-
-        <div class="footer-base">
+    <footer class="footer-base">
+ 
+        <div >
             <div class="navigation-botton">
                 <nav>
                     <img src="./../../data/img/searchOff.png" alt="search" id="search-botton">
@@ -101,21 +83,7 @@
         const scanner = new QrScanner(video, result => setResult(camQrResult, result));
         scanner.start();
 
-        document.getElementById('inversion-mode-select').addEventListener('change', event => {
-            scanner.setInversionMode(event.target.value);
-        });
 
-        // ####### File Scanning #######
-
-        fileSelector.addEventListener('change', event => {
-            const file = fileSelector.files[0];
-            if (!file) {
-                return;
-            }
-            QrScanner.scanImage(file)
-                .then(result => setResult(fileQrResult, result))
-                .catch(e => setResult(fileQrResult, e || 'No QR code found.'));
-        });
     </script>
 
     <script src="./../scripts/Camara.js"></script>
