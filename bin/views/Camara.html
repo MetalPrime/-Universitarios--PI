@@ -15,113 +15,111 @@
 
 <body>
 
-        <header>
-    
-                <div class="header-base">
-                    <div>
-                            <img src="./../../data/img/Burger.png" alt="burgen-bottom"class="burger-bottom">
-                    </div>
-                     <div id="universitarios-text">
-                            Universitarios
-                    </div> 
+    <header>
+
+        <div class="header-base">
+            <div>
+                <img src="./../../data/img/Burger.png" alt="burgen-bottom" class="burger-bottom">
+            </div>
+            <div id="universitarios-text">
+                Universitarios
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="elements">
+
+            <div class="elements">
+
+                <video muted="" playsinline="" id="qr-video" style="transform: scaleX(-1);"></video>
+            </div>
+
+            <div>
+                <b>QR DETECTED</b>
+                <span id="cam-qr-result" style="color: inherit;"></span>
+            </div>
+
+            <div>
+                <input type="file" id="file-selector">
+
+            </div>
+
+            <div>
+
+                <span id="file-qr-result">None</span>
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer>
+
+        <div class="footer-base">
+            <div class="navigation-botton">
+                <nav>
+                    <img src="./../../data/img/searchOff.png" alt="search" id="search-botton">
+                </nav>
+                <div>
+                    <img src="./../../data/img/camaraOn.png" alt="camara" id="navigation-elements">
                 </div>
-            </header>
-            
-            
-            <main>
-                <div class="elements">
-              
-                        <div class="elements">
-  
-                                <video muted="" playsinline="" id="qr-video" style="transform: scaleX(-1);"></video>
-                        </div>
-                    
-                        <div>
-                            <b>QR DETECTED</b>
-                            <span id="cam-qr-result" style="color: inherit;"></span>
-                        </div>
-                    
-                        <div>
-                                <input type="file" id="file-selector">
-                    
-                        </div>
-
-                        <div>
-                            
-                                <span id="file-qr-result">None</span>
-                        </div>
-            
-                </div>
-            </main>
-            
-            
-                <footer>
-                    
-                   <div class="footer-base">
-                       <div class="navigation-botton">
-                       <nav>
-                           <img src="./../../data/img/searchOff.png" alt="search" id="search-botton">
-                       </nav>
-                       <div>
-                           <img src="./../../data/img/camaraOn.png" alt="camara" id="navigation-elements" >
-                       </div>
-                       <nav>
-                           <img src="./../../data/img/contactOff.png" alt="contact" id="contact-botton">
-                        </div>
-                       </nav>
-                   </div>
-                </footer>
+                <nav>
+                    <img src="./../../data/img/contactOff.png" alt="contact" id="contact-botton">
+            </div>
+            </nav>
+        </div>
+    </footer>
 
 
-   
 
-    <script src="./../scripts/Camara.js"></script>
-    <script src="./src/p5.js"></script>
-    <script src="./src/p5.sound.js"></script>
+
     <script type="module">
         import QrScanner from './../../src/qr-scanner.min.js';
         // do something with QrScanner
-    QrScanner.WORKER_PATH = './../../src/qr-scanner-worker.min.js';
+        QrScanner.WORKER_PATH = './../../src/qr-scanner-worker.min.js';
 
-    const video = document.getElementById('qr-video');
-    const camHasCamera = document.getElementById('cam-has-camera');
-    const camQrResult = document.getElementById('cam-qr-result');
-    const camQrResultTimestamp = document.getElementById('cam-qr-result-timestamp');
-    const fileSelector = document.getElementById('file-selector');
-    const fileQrResult = document.getElementById('file-qr-result');
+        const video = document.getElementById('qr-video');
+        const camHasCamera = document.getElementById('cam-has-camera');
+        const camQrResult = document.getElementById('cam-qr-result');
+        const camQrResultTimestamp = document.getElementById('cam-qr-result-timestamp');
+        const fileSelector = document.getElementById('file-selector');
+        const fileQrResult = document.getElementById('file-qr-result');
 
-    function setResult(label, result) {
-        label.textContent = result;
-        camQrResultTimestamp.textContent = new Date().toString();
-        label.style.color = 'teal';
-        clearTimeout(label.highlightTimeout);
-        label.highlightTimeout = setTimeout(() => label.style.color = 'inherit', 100);
-    }
-
-    // ####### Web Cam Scanning #######
-
-    
-    const scanner = new QrScanner(video, result => setResult(camQrResult, result));
-    scanner.start();
-
-    document.getElementById('inversion-mode-select').addEventListener('change', event => {
-        scanner.setInversionMode(event.target.value);
-    });
-
-    // ####### File Scanning #######
-
-    fileSelector.addEventListener('change', event => {
-        const file = fileSelector.files[0];
-        if (!file) {
-            return;
+        function setResult(label, result) {
+            label.textContent = result;
+            camQrResultTimestamp.textContent = new Date().toString();
+            label.style.color = 'teal';
+            clearTimeout(label.highlightTimeout);
+            label.highlightTimeout = setTimeout(() => label.style.color = 'inherit', 100);
         }
-        QrScanner.scanImage(file)
-            .then(result => setResult(fileQrResult, result))
-            .catch(e => setResult(fileQrResult, e || 'No QR code found.'));
-    });
+
+        // ####### Web Cam Scanning #######
 
 
+        const scanner = new QrScanner(video, result => setResult(camQrResult, result));
+        scanner.start();
+
+        document.getElementById('inversion-mode-select').addEventListener('change', event => {
+            scanner.setInversionMode(event.target.value);
+        });
+
+        // ####### File Scanning #######
+
+        fileSelector.addEventListener('change', event => {
+            const file = fileSelector.files[0];
+            if (!file) {
+                return;
+            }
+            QrScanner.scanImage(file)
+                .then(result => setResult(fileQrResult, result))
+                .catch(e => setResult(fileQrResult, e || 'No QR code found.'));
+        });
     </script>
+
+    <script src="./../scripts/Camara.js"></script>
+
 
 
 
