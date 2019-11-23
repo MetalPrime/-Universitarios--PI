@@ -3,10 +3,10 @@ let menuDesplegable = document.querySelector(".menu");
 let back = document.querySelector(".menu-return");
 let principal = document.querySelector(".principal");
 let config = document.querySelector(".options");
-let exit= document.querySelector(".exitBotton");
-let camara= document.querySelector("#navigation-elements");
-let search= document.querySelector("#search-botton");
-let contact= document.querySelector("#contact-botton");
+let exit = document.querySelector(".exitBotton");
+let camara = document.querySelector("#navigation-elements");
+let search = document.querySelector("#search-botton");
+let contact = document.querySelector("#contact-botton");
 
 // boton hamburguesa bn perron
 
@@ -20,7 +20,7 @@ btnBurger.addEventListener("click", function (event) {
 
 // boton cerrar hamburguesa
 
-back.addEventListener("click", function(event) {
+back.addEventListener("click", function (event) {
     menuDesplegable.style.transition = "left 0.5s ease-in-out";
     menuDesplegable.style.left = "-50%";
     console.log("chupelo");
@@ -29,38 +29,32 @@ back.addEventListener("click", function(event) {
 
 // boton para ir a configuraciones
 
-config.addEventListener("click",function(event){
-    document.location.href="./../views/Settings.html";
+config.addEventListener("click", function (event) {
+    document.location.href = "./../views/Settings.html";
 })
 
 // boton para cerrar sesión
 
-exit.addEventListener("click",function(event){
-    document.location.href="./../views/Exit.html";
+exit.addEventListener("click", function (event) {
+    document.location.href = "./../views/Exit.html";
 })
 
 // boton para ir a camara
 
-camara.addEventListener("click",function(){
-    document.location.href="./../views/Camara.html";
+camara.addEventListener("click", function () {
+    document.location.href = "./../views/Camara.html";
 })
 
 // boton para ir a search
 
-search.addEventListener("click",function(){
-    document.location.href="./../views/Suggestions.html";
+search.addEventListener("click", function () {
+    document.location.href = "./../views/Suggestions.html";
 })
 
 // boton para ir a collaborator
 
-contact.addEventListener("click",function(){
-    document.location.href="./../views/Collaborator.html";
+contact.addEventListener("click", function () {
+    document.location.href = "./../views/Collaborator.html";
 })
 
 // opacidad elemenntos, cuando el menu esta despelagado
-
-
-
-
-
-
