@@ -1,6 +1,7 @@
 let btnBurger = document.querySelector(".burger-bottom");
 let menuDesplegable = document.querySelector(".menu");
 let back = document.querySelector(".menu-return");
+let principal = document.querySelector(".principal");
 let config = document.querySelector(".options");
 let exit= document.querySelector(".exitBotton");
 let camara= document.querySelector("#navigation-elements");
@@ -14,7 +15,7 @@ console.log(localStorage.getItem("accountState"));
 btnBurger.addEventListener("click", function (event) {
     menuDesplegable.style.transition = "left 0.5s ease-in-out";
     menuDesplegable.style.left = "0px";
-
+    principal.classList.add("enable");
 })
 
 // boton cerrar hamburguesa
@@ -23,6 +24,7 @@ back.addEventListener("click", function(event) {
     menuDesplegable.style.transition = "left 0.5s ease-in-out";
     menuDesplegable.style.left = "-50%";
     console.log("chupelo");
+    principal.classList.remove("enable");
 })
 
 // boton para ir a configuraciones
@@ -55,6 +57,7 @@ contact.addEventListener("click",function(){
     document.location.href="./../views/Collaborator.html";
 })
 
+// opacidad elemenntos, cuando el menu esta despelagado
 
 
 
