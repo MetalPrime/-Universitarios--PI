@@ -6,8 +6,10 @@ body{
     width: 100%;
     height: 720px;
    background: white;
-   
-  
+   background-image: url(./../../data/img/background.png);
+   background-size: cover;
+   margin: auto;
+
 }
 
 
@@ -50,7 +52,7 @@ footer{
 width: 226px;
 height: 33px;
 margin: auto;
-margin-bottom:50px;
+margin-bottom:15px;
 font-family: Nunito;
 font-style: normal;
 font-weight: bold;
@@ -93,7 +95,7 @@ font-weight: 300;
 font-size: 14px;
 line-height: 15px;
 text-align: center;
-
+margin-top: 30px;
 color: #696A9F;
 
 }
@@ -106,6 +108,7 @@ cursor: pointer;
 width: 141px;
 height: 40px;
 margin: auto;
+margin-top: 30px;
 color: white;
 text-align: center;
 /*esto sirve para alinear al centro centro*/
