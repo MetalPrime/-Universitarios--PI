@@ -6,6 +6,7 @@ let exit= document.querySelector(".exitBotton");
 let camara= document.querySelector("#navigation-elements");
 let search= document.querySelector("#search-botton");
 let contact= document.querySelector("#contact-botton");
+let calendario = document.querySelector(".calendario");
 
 // boton hamburguesa bn perron
 
@@ -53,4 +54,10 @@ search.addEventListener("click",function(){
 
 contact.addEventListener("click",function(){
     document.location.href="./../views/Collaborator.html";
+})
+
+//
+
+calendario.addEventListener("click",function(){
+    document.location.href="https://www.banrepcultural.org/actividades/cali";
 })
