@@ -273,3 +273,18 @@ footer {
         margin-left: 0;
     }
 }
+
+@media(max-width:700px){
+    .menu {
+        position: absolute;
+        width: 80%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: #594D94;
+        left: -80%;
+        top: 0;
+        transition: left 0.5s ease-in-out;
+        z-index: 2;
+    }
+}

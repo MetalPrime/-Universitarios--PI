@@ -22,7 +22,7 @@ btnBurger.addEventListener("click", function (event) {
 
 back.addEventListener("click", function (event) {
     menuDesplegable.style.transition = "left 0.5s ease-in-out";
-    menuDesplegable.style.left = "-50%";
+    menuDesplegable.style.left = "-80%";
     console.log("chupelo");
     principal.classList.remove("enable");
 })
