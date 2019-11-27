@@ -248,6 +248,12 @@ footer {
     background-position-x: 50%;
     background-image: url("./../../data/img/jaguarPng.png");
 }
+.armadillo{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-image: url("./../../data/img/armadillo.jpg");
+}
 
 .userContent {
     justify-content: center;
@@ -294,13 +300,4 @@ footer {
         transition: left 0.5s ease-in-out;
         z-index: 2;
     }
-}
-.TittleJaguar{
-    background-image: url(./../../data/img/jaguarPng.png);
-    width: 100%;
-    height: 100;
-}
-.imageJaguar{
-    background-image: url(./../../data/img/jaguarPng.png);
-  
 }
