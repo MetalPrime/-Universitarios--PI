@@ -259,7 +259,13 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: 50%;
-    background-image: url("./../../data/img/armadillo.jpg");
+    background-image: url("./../../data/img/serpiente.png");
+}
+.zarigueya{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-image: url("./../../data/img/zariguella.png");
 }
 
 .userContent {
