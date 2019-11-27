@@ -49,6 +49,19 @@ header,main,footer{
     margin-top: 4px;
 }
 
+.descarga{
+    cursor: pointer;
+    justify-items: right;
+    justify-content: right;
+    
+    margin-right: 20px;
+    margin-top: 4px;
+    width: 23px;
+    height: 19px;
+    fill: #FFFFFF;
+}
+
+
 .text-base{
     text-align: center;
     justify-items: center;
@@ -60,6 +73,10 @@ main {
     height: 500px;
     width: fit-content;
     margin: 0 auto;
+}
+
+.infografia{
+    
 }
 
 
@@ -79,4 +96,14 @@ footer{
     width: 100%;
     background-image: url('../../data/img/footerBase.png');
     background-size: cover;
+}
+
+
+
+@media (max-width: 750px){
+    
+.infografia{
+    content: url("./../../data/img/JaguarMovil.jpg");
+    
+}
 }
