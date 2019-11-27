@@ -242,6 +242,13 @@ footer {
     margin-top: 5px;
 }
 
+.jaguar{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-image: url("./../../data/img/jaguarPng.png");
+}
+
 .userContent {
     justify-content: center;
     margin: 10px auto;
