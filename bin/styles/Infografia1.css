@@ -79,6 +79,8 @@ main {
     
 }
 
+.movil{}
+
 
 footer{
     margin-top: 100px;
@@ -106,4 +108,9 @@ footer{
     content: url("./../../data/img/JaguarMovil.jpg");
     
 }
+
+
 }
+
+
+

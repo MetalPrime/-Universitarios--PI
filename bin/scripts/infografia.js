@@ -1,4 +1,4 @@
-let download = document.querySelector(".descargar");
+let descargar = document.querySelector(".descargar");
 let back = document.querySelector(".back");
 
 //
@@ -8,3 +8,4 @@ back.addEventListener("click", function () {
 })
 
 //
+
