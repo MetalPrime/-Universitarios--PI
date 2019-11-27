@@ -255,6 +255,13 @@ footer {
     background-image: url("./../../data/img/armadillo.jpg");
 }
 
+.serpiente{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-image: url("./../../data/img/armadillo.jpg");
+}
+
 .userContent {
     justify-content: center;
     margin: 10px auto;
