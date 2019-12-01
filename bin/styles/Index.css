@@ -21,6 +21,14 @@ header,main,footer{
     position: relative;
     transition: background .5s ease-in-out;
 }
+.back{
+    cursor: pointer;
+    justify-items: left;
+    justify-content: left;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 4px;
+}
 
 
 
